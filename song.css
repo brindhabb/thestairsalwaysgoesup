@@ -1,0 +1,176 @@
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: #1db954;
+  color: white;
+}
+
+.song-page {
+  top: 90px;
+  text-align: center;
+  position: relative;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+
+}
+#song-page h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.album-art {
+  width: 80%;
+  max-width: 320px;
+  border-radius: 12px;
+  margin: 1.5em auto;
+  display: block;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.nav-back {
+  background: none;
+  color: white;
+  font-size: 2rem;
+  border: none;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  cursor: pointer;
+}
+
+#songTitle {
+  top: 20px;
+  position: relative;
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+.player-controls {
+  top: 60px;
+  position: relative;
+  margin-top: 2rem;
+}
+
+.seek-bar {
+  position: relative;
+  right: -50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75em;
+  margin: 1.5rem auto;
+}
+
+.seek-bar input[type="range"] {
+  width: 60%;
+  height: 4px;
+  background-color: white;
+  border-radius: 2px;
+  cursor: pointer;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.seek-bar input[type="range"]::-webkit-slider-thumb {
+  height: 12px;
+  width: 12px;
+  background: white;
+  border-radius: 50%;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: 0px;
+}
+
+.seek-bar input[type="range"]::-moz-range-thumb {
+  height: 12px;
+  width: 12px;
+  background: white;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin: 1.5rem auto;
+}
+
+.controls button {
+  background: white;
+  color: #1db954;
+  border: none;
+  border-radius: 50%;
+  font-size: 2rem;
+  padding: 0.6rem;
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.controls button:hover {
+  background: #e0ffe6;
+}
+
+/* 8D Toggle Switch */
+.switch {
+  top: -40px;
+  right: 100px;
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 22px;
+  margin-left: 0.5rem;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgb(255, 255, 255);
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 4px;
+  bottom: 3px;
+  background-color: #1db954;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #e0ffe6;
+}
+
+input:checked + .slider:before {
+  transform: translateX(18px);
+}
+
+.mode-label {
+  top: -38px;
+  right: 106px;
+  position: relative;
+  font-size: 1.2rem;
+  margin-left: 0.25rem;
+  color: rgb(255, 255, 255);
+  font-weight: 500;
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Now Playing</title>
+  <link rel="stylesheet" href="song.css" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+</head>
+<body>
+  <div class="song-page">
+    <button id="backBtn" class="material-icons nav-back">arrow_back</button>
+
+    <img id="songImage" src="" alt="Album Art" class="album-art" />
+    <h2 id="songTitle">Song Title</h2>
+
+    <audio id="audio" preload="metadata" hidden></audio>
+    <audio id="audio8D" preload="metadata" hidden></audio>
+
+    <div class="player-controls">
+      <div class="seek-bar">
+        <span id="currentTime">0:00</span>
+        <input type="range" id="seekSlider" value="0" min="0" step="1">
+        <span id="duration">0:00</span>
+        <label class="switch">
+          <input type="checkbox" id="toggle8D">
+          <span class="slider"></span>
+        </label>
+        <span class="mode-label">8D</span>
+      </div>
+
+      <div class="controls">
+        <button id="prevBtn" class="material-icons">skip_previous</button>
+        <button id="playPauseBtn" class="material-icons">pause</button>
+        <button id="nextBtn" class="material-icons">skip_next</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="player.js"></script>
+</body>
+</html>
